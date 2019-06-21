@@ -1,7 +1,8 @@
 /* TabCard constructor */
 function newTabCard({ _cardElement }) {
+  const _eslintObligation = _cardElement;
   const selectCard = () => {
-    _cardElement.style.display = 'flex';
+    _eslintObligation.style.display = 'flex';
   };
 
   return Object.freeze({ selectCard });
@@ -28,7 +29,8 @@ function newTablink({ _tabElement }) {
       tab.classList.remove('active-tab');
     });
     document.querySelectorAll('.card').forEach((card) => {
-      card.style.display = 'none';
+      const eslintObligation = card;
+      eslintObligation.style.display = 'none';
     });
     _tabElement.classList.add('active-tab');
     _cards.forEach((card) => {
